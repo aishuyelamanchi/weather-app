@@ -1,0 +1,17 @@
+topic: ~weather()
+language: enu
+
+# Defining extra concepts out of words or group of words
+#concept:(hello) [hello hi hey "good morning" greetings]
+
+# Catching inputs and triggering outputs
+#u:(e:onStart) $onStopped=1
+
+# Replying to speech
+#u:(~hello) ~hello
+
+u:(hi)hey
+u:("_*") $1
+u:("hi _*") you mean $1 $weathe=$1
+
+u:("{*} weather of  _["hong kong" india delhi] {*}") you mean $1 $weathe=$1
